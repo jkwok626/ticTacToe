@@ -1,0 +1,39 @@
+	To run this program, you can open up the file named "tic.c" and paste its contents into an online C compiler 
+such as https://onlinegdb.com/online_c_compiler and hit run (make sure to expand the console window). Alternatively, if 
+you would like to run this project on a local machine, compile it first by typing "gcc -Wall tic.c -o tic" into a 
+terminal. On Linux, Unix, and MacOS, you can run the program by typing "./tic". On Windows, you can run the program by 
+typing "tic.exe". To play, enter a number from 1 to 9 with 1 representing the spot in the top left and 9 representing 
+the spot in the bottom right. The program will print out a board to the terminal after your turn and then clear the 
+screen after a few seconds. Then an updated board will print out after the computer's turn. To see the code, make sure 
+you're inside the ticTacToe directory and open up tic.c.
+
+	This project allows the user to play Tic-tac-toe against a computer that will never lose. To begin, I started 
+by recreating Tic-tac-toe. I made the board by using a two-dimensional array and I initialized all the array elements 
+to 0 to signify that they were empty. To represent spots that were occupied, I used a value of 1 for circles and a 
+value of 2 for x's. This way, I could update the board accordingly by changing the values of the individual array 
+elements, check if there's a winner and determine who the winner is, and, most importantly, formulate how the 
+computer would respond when certain scenarios appeared during the progression of the game. 
+
+	When I designed the computer player, I broke down the first turn of the player into three cases. There are three 
+types of spots in the game: middle, corner, and side. Since I knew this, I looked up strategies on YouTube that the 
+player might use when they choose one of those three types of spaces on the first turn so I programmed the computer to 
+identify which strategy was being used and choose the right spots to counter. In addition, I made it so that the 
+computer when the computer sees two adjacent, occupied spots, it will immediately take the third spot in that row. At
+first I was only doing this to block the player from winning, so the computer only responded to two adjacent circles but
+then I realized that the computer should prioritize the third spot regardless of whether or not they contain circles. As
+long as those two spots were the same, it would either block the player or get a win for the computer. This ended up 
+being much more efficient since it meant that I didn't have to write another chunk of similar code.
+
+	By doing this project, I feel like my scope of thinking has been widened. It has helped me learn to break down 
+big challenges into smaller individual problems that I can solve one at a time. It has helped me learn the opposite, 
+which was grouping up small, similar problems and solving them all at once. I also have a better understanding of taking
+in user input in C after doing this project. Even though I've finished this project for now, I could definitely continue
+improving it. Right now, I'm printing the game board to the terminal but the terminal isn't very interactive. I chose
+to work around this by asking the user to enter a number from 1 to 9, but I want to improve this by allowing the user
+to click on the spots with their mouse or touch them with their finger. That's why I'm looking forward to learning how 
+to use Microsoft Visual Studio Express or Android Studio.
+
+Tic-tac-toe Strategy Videos that I used: youtu.be/5DebznNDuxU
+					 youtu.be/EiShxMXwogU
+					 youtu.be/lmQrPEQtp2E
+					 youtu.be/5n2aQ3UQu9Y
